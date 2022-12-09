@@ -17,6 +17,10 @@ const usuarioSchema=mongoose.Schema({
 		type: String,
 		require: true
 	},
+	dni: {
+		type: String,
+		require: true
+	},
 	rpta: {
 		type: Boolean,
 		default:true

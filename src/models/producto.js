@@ -24,6 +24,10 @@ const productoSchema=mongoose.Schema({
 	detalle:{
 		type: String,
 		require: true
+	},
+	urlImage:{
+		type: String,
+		default:"https://cdn-icons-png.flaticon.com/512/756/756940.png"
 	}
 })
 
