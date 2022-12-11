@@ -29,6 +29,7 @@ const productoSchema=mongoose.Schema({
 		type: String,
 		default:"https://cdn-icons-png.flaticon.com/512/756/756940.png"
 	}
+
 })
 
 
