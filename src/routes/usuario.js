@@ -19,14 +19,14 @@ router.post("/usuario",(req,res)=>{
 	const usuario=usuarioSchema(req.body)
 	usuario.save()
 	.then(data=>res.json(data))
-	.catch(error=>res.json({message:error}))
+	.catch(error=>res.json({mensaje:error}))
 })
 
 
 router.get("/usuario", (req, res) => {
 	usuarioSchema.find()
 		.then(data => res.json(data))
-		.catch(error => res.json({ message: error }))
+		.catch(error => res.json({ mensaje: error }))
 })
 
 
@@ -35,7 +35,7 @@ router.get("/usuario/:cod", (req, res) => {
 	const {cod}=req.params
 	usuarioSchema.findOne({usuario:cod})
 		.then(data => res.json(data))
-		.catch(error => res.json({ message: error }))
+		.catch(error => res.json({ mensaje: error }))
 })
 
 
@@ -46,7 +46,7 @@ router.put("/usuario/:cod", (req, res) => {
 	delete usua.usuario
 	usuarioSchema.updateOne({usuario:cod}, {$set:usua})
 		.then(data => res.json(data))
-		.catch(error => res.json({ message: error }))
+		.catch(error => res.json({ mensaje: error }))
 })
 
 
@@ -54,7 +54,7 @@ router.delete("/usuario/:cod", (req, res) => {
 	const { cod } = req.params
 	usuarioSchema.deleteOne({ usuario: cod })
 		.then(data => res.json(data))
-		.catch(error => res.json({ message: error }))
+		.catch(error => res.json({ mensaje: error }))
 })
 
 
